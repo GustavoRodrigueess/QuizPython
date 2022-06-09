@@ -114,7 +114,7 @@ def perguntas(dificuldade):
                 'resposta':{
                     'A(c)':'Elevação da acidez',
                     'B':'Ampliação da salinidade',
-                    'C':'Formação de voçorocas'
+                    'C':'Formação de voçorocas',
                 }
             }
         }
@@ -123,12 +123,11 @@ def perguntas(dificuldade):
         print(f'{pk}: {pv["pergunta"]}')
 
         print('Respostas: ')
-        for rk, rv in pv['respostas'].items():
+        for rk, rv in pv['resposta'].items():
             print(f'[{rk}]: {rv}')
 
         print()
 
-    return pontos
 
 def pontuacao_final(pontos):
 
