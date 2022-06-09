@@ -26,15 +26,30 @@ def perguntas(dificuldade):
 
         perguntas = {
             'Pergunta 1':{
-
+                'pergunta':'',
+                'resposta':{
+                    'A':'',
+                    'B':'',
+                    'C':''
+                }
             },
 
             'Pergunta 2':{
-
+                'pergunta':'',
+                'resposta':{
+                    'A':'',
+                    'B':'',
+                    'C':''
+                }
             },
 
             'Pergunta 3':{
-
+                'pergunta':'',
+                'resposta':{
+                    'A':'',
+                    'B':'',
+                    'C':''
+                }
             }
         }
 
@@ -44,19 +59,32 @@ def perguntas(dificuldade):
 
         perguntas = {
             'Pergunta 1':{
-
+                'pergunta':'',
+                'resposta':{
+                    'A':'',
+                    'B':'',
+                    'C':''
+                }
             },
 
             'Pergunta 2':{
-
+                'pergunta':'',
+                'resposta':{
+                    'A':'',
+                    'B':'',
+                    'C':''
+                }
             },
 
             'Pergunta 3':{
-
-
+                'pergunta':'',
+                'resposta':{
+                    'A':'',
+                    'B':'',
+                    'C':''
+                }
             }
-
-       }
+        }
 
     if dificuldade == 3:
         print(emoji.emojize("\nSerá que você entende mesmo? :exploding_head:"))
@@ -75,12 +103,19 @@ def perguntas(dificuldade):
             'Pergunta 2':{
                 'pergunta':'Em Beirute, no Líbano, quando perguntado sobre onde se encontram os refugiados sírios, a resposta do homem é imediata: “em todos os lugares e em lugar nenhum”. Andando ao acaso, não é raro ver, sob um prédio ou num canto de calçada, ao abrigo do vento, uma família refugiada em volta de uma refeição frugal posta sobre jornais como se fossem guardanapos. Também se vê de vez em quando uma tenda com a sigla ACNUR (Alto Comissariado das Nações Unidas para Refugiados), erguida em um dos raros terrenos vagos da capital. O cenário descrito aponta para uma crise humanitária que é explicada pelo processo de: ',
                 'resposta':{
-                    
+                    'A':'',
+                    'B':'',
+                    'C':''
                 }
             },
 
             'Pergunta 3':{
-
+                'pergunta':'',
+                'resposta':{
+                    'A':'',
+                    'B':'',
+                    'C':''
+                }
             }
         }
 
