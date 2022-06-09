@@ -28,10 +28,11 @@ def perguntas(dificuldade):
             'Pergunta 1':{
                 'pergunta':'Um dos principais tipos de migrações internacionais existentes é a chamada “fuga de cérebros”, que consiste:',
                 'resposta':{
-                    'A(c)':'no deslocamento em massa de profissionais especializados e de grande conhecimento para outros países.',
+                    'A':'no deslocamento em massa de profissionais especializados e de grande conhecimento para outros países.',
                     'B':'na perda de trabalhadores com baixa qualificação técnica para países estrangeiros, geralmente mais desenvolvidos',
                     'C':'na migração sazonal de pesquisadores universitários e estudantes, como em intercâmbios e cursos de capacitação'
-                }
+                },
+                'resposta_certa':'A'
             },
 
             'Pergunta 2':{
@@ -39,8 +40,9 @@ def perguntas(dificuldade):
                 'resposta':{
                     'A':'pela facilidade do fluxo de trabalhadores condicionados pelos novos meios de comunicação e transportes',
                     'B':'pela incorporação de valores ocidentais no Oriente e de valores orientais no Ocidente, diminuindo as fronteiras simbólicas.',
-                    'C(c)':'pelo aumento global do desemprego, que gera miséria nas nações de baixo índice de desenvolvimento humano'
-                }
+                    'C':'pelo aumento global do desemprego, que gera miséria nas nações de baixo índice de desenvolvimento humano'
+                },
+                'resposta_certa':'C'
             },
 
             'Pergunta 3':{
@@ -48,8 +50,9 @@ def perguntas(dificuldade):
                 'resposta':{
                     'A':'pela incorporação de valores ocidentais no Oriente e de valores orientais no Ocidente, diminuindo as fronteiras simbólicas',
                     'B':'pela aprendizagem de idiomas dos países ricos como forma de incorporação às novas demandas da indústria',
-                    'C(c)':'pela facilidade do fluxo de trabalhadores condicionados pelos novos meios de comunicação e transportes'
-                }
+                    'C':'pela facilidade do fluxo de trabalhadores condicionados pelos novos meios de comunicação e transportes'
+                },
+                'resposta_certa':'C'
             }
         }
 
@@ -63,26 +66,29 @@ def perguntas(dificuldade):
                 'resposta':{
                     'A':'sempre são escritos em grego ou em palavras derivadas dessa língua',
                     'B':'sempre são escritos em português.',
-                    'C(c)':'sempre são escritos em latim ou os termos são latinizados.'
-                }
+                    'C':'sempre são escritos em latim ou os termos são latinizados.'
+                },
+                'resposta_certa':'C'
             },
 
             'Pergunta 2':{
                 'pergunta':'Os nomes científicos apresentam algumas regras que devem ser seguidas no momento da escrita em um texto. Observe a seguir o nome científico do cajueiro e marque a alternativa em que todas as regras são obedecidas',
                 'resposta':{
                     'A':'Anacardium Occidentale.',
-                    'B(c)':'Anacardium occidentale/italico. ',
+                    'B':'Anacardium occidentale/italico. ',
                     'C':'Anacardium Occidentale/italico.'
-                }
+                },
+                'resposta_certa':'B'
             },
 
             'Pergunta 3':{
                 'pergunta':'Quando escrevemos o nome de uma espécie, utilizamos normalmente dois termos: o gênero e o epíteto específico. Algumas vezes, no entanto, observamos a nomenclatura trinomial, como é o caso da ave: Haematopus ostralegus occidentalis. Nesse caso, temos um exemplo de:',
                 'resposta':{
-                    'A(c)':'subgênero.',
+                    'A':'subgênero.',
                     'B':'subreino.',
                     'C':'subespécie.'
-                }
+                },
+                'resposta_certa':'A'
             }
         }
 
@@ -95,9 +101,10 @@ def perguntas(dificuldade):
                 'pergunta':'Os países industriais adotaram uma concepção diferente das relações familiares e do lugar da fecundidade na vida familiar e social. A preocupação de garantir uma transmissão integral das vantagens econômicas e sociais adquiridas tem como resultado uma ação voluntária de limitação do número de nascimentos. Em meados do século XX, o fenômeno social descrito contribuiu para o processo europeu de: ',
                 'resposta':{
                     'A':'estabilização da pirâmide etária.',
-                    'B(c)':'conclusão da transição demográfica.',
+                    'B':'conclusão da transição demográfica.',
                     'C':'contenção da entrada de imigrantes.',
-                }
+                },
+                'resposta_certa':'B'
             },
 
             'Pergunta 2':{
@@ -105,28 +112,44 @@ def perguntas(dificuldade):
                 'resposta':{
                     'A':'desmobilização voluntária de militantes cooptados por seitas extremistas',
                     'B':'migração massiva de pessoas atingidas por catástrofe natural',
-                    'C(c)':'desterritorialização forçada de populações afetadas por conflitos armados'
-                }
+                    'C':'desterritorialização forçada de populações afetadas por conflitos armados'
+                },
+                'resposta_certa':'C'
             },
 
             'Pergunta 3':{
                 'pergunta':'O desgaste acelerado sempre existirá se o agricultor não tiver o devido cuidado de combater as causas, relacionadas a vários processos, tais como: empobrecimento químico e lixiviação provocados pelo esgotamento causado pelas colheitas e pela lavagem vertical de nutrientes da água que se infiltra no solo, bem como pela retirada de elementos nutritivos com as colheitas. Os nutrientes retirados, quando não repostos, são comumente substituídos por elementos tóxicos, como, por exemplo, o alumínio. A dinâmica ambiental exemplificada no texto gera a seguinte consequência para o solo agricultável',
                 'resposta':{
-                    'A(c)':'Elevação da acidez',
+                    'A':'Elevação da acidez',
                     'B':'Ampliação da salinidade',
                     'C':'Formação de voçorocas',
-                }
+                },
+                'resposta_certa':'A'
             }
         }
 
     for pk, pv in perguntas.items():
         print(f'{pk}: {pv["pergunta"]}')
 
+        print()
         print('Respostas: ')
         for rk, rv in pv['resposta'].items():
             print(f'[{rk}]: {rv}')
 
         print()
+        resposta_usuario = input('Digite sua resposta aqui: ')
+
+        if resposta_usuario == pv['resposta_certa']:
+            pontos += 1
+            print()
+            print(emoji.emojize('Parabénse, você acertou! :check_mark_button:'))
+        else:
+            print()
+            print(emoji.emojize('Infelizmente, você errou! :prohibited:'))
+
+        print()
+    
+    return pontos
 
 
 def pontuacao_final(pontos):
@@ -147,4 +170,4 @@ def pontuacao_final(pontos):
 name = intro()
 screen = nivel(name)
 question = perguntas(screen)
-
+exec = pontuacao_final(question)
